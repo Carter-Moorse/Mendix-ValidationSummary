@@ -1,4 +1,5 @@
-import { DisplayAllValidationsPreviewProps } from "../typings/DisplayAllValidationsProps";
+import { ValidationDumpPreviewProps } from "../typings/ValidationDumpProps";
+import { hideNestedPropertiesIn } from "@mendix/pluggable-widgets-tools";
 
 export type Platform = "web" | "desktop";
 
@@ -100,19 +101,25 @@ export type PreviewProps =
     | DatasourceProps;
 
 export function getProperties(
-    _values: DisplayAllValidationsPreviewProps,
+    _values: ValidationDumpPreviewProps,
     defaultProperties: Properties /* , target: Platform*/
 ): Properties {
-    // Do the values manipulation here to control the visibility of properties in Studio and Studio Pro conditionally.
-    /* Example
-    if (values.myProperty === "custom") {
-        delete defaultProperties.properties.myOtherProperty;
-    }
-    */
+    _values.listenToFields.forEach((value, index) => {
+        if (value.type === "attribute") {
+            hideNestedPropertiesIn(defaultProperties, _values, "listenToFields", index, ["reference", "data"]);
+        } else {
+            hideNestedPropertiesIn(defaultProperties, _values, "listenToFields", index, ["attribute"]);
+        }
+
+        if (value.clickAction === "none") {
+            hideNestedPropertiesIn(defaultProperties, _values, "listenToFields", index, ["actionSelector"]);
+        }
+    });
+
     return defaultProperties;
 }
 
-// export function check(_values: DisplayAllValidationsPreviewProps): Problem[] {
+// export function check(_values: ValidationDumpPreviewProps): Problem[] {
 //     const errors: Problem[] = [];
 //     // Add errors to the above array to throw errors in Studio and Studio Pro.
 //     /* Example
@@ -127,7 +134,7 @@ export function getProperties(
 //     return errors;
 // }
 
-// export function getPreview(values: DisplayAllValidationsPreviewProps, isDarkMode: boolean, version: number[]): PreviewProps {
+// export function getPreview(values: ValidationDumpPreviewProps, isDarkMode: boolean, version: number[]): PreviewProps {
 //     // Customize your pluggable widget appearance for Studio Pro.
 //     return {
 //         type: "Container",
@@ -135,6 +142,6 @@ export function getProperties(
 //     }
 // }
 
-// export function getCustomCaption(values: DisplayAllValidationsPreviewProps, platform: Platform): string {
-//     return "DisplayAllValidations";
+// export function getCustomCaption(values: ValidationDumpPreviewProps, platform: Platform): string {
+//     return "ValidationDump";
 // }

@@ -1,8 +1,8 @@
 {
-  "name": "displayallvalidations",
-  "widgetName": "DisplayAllValidations",
+  "name": "validationdump",
+  "widgetName": "ValidationDump",
   "version": "1.0.0",
-  "description": "Subscribe to the validation messages on the current page",
+  "description": "Dump a summary of validation messages - based on selected fields",
   "copyright": "© Mendix Technology BV 2022. All rights reserved.",
   "author": "Carter Moorse",
   "engines": {
@@ -10,7 +10,7 @@
   },
   "license": "Apache-2.0",
   "config": {
-    "projectPath": "./tests/testProject",
+    "projectPath": "../../Mendix/TestApp",
     "mendixHost": "http://localhost:8080",
     "developmentPort": 3000
   },

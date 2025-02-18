@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="auraq.validationdump.ValidationDump" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Validation Dump</name>
+    <description>Dump a summary of validation messages - based on selected fields</description>
+    <studioProCategory>Feedback</studioProCategory>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="General">
+                <property key="listenToFields" type="object" isList="true">
+                    <caption>Listen to fields</caption>
+                    <description></description>
+                    <properties>
+                        <propertyGroup caption="General">
+                            <propertyGroup caption="Data">
+                                <property key="data" type="datasource" isList="true" required="false">
+                                    <caption>Data source</caption>
+                                    <description />
+                                </property>
+                                <property key="type" type="enumeration" defaultValue="attribute">
+                                    <caption>Listen type</caption>
+                                    <description></description>
+                                    <enumerationValues>
+                                        <enumerationValue key="attribute">Attribute</enumerationValue>
+                                        <enumerationValue key="reference">Reference</enumerationValue>
+                                    </enumerationValues>
+                                </property>
+                                <property key="reference" type="association" selectableObjects="data" required="false">
+                                    <caption>Reference</caption>
+                                    <description></description>
+                                    <associationTypes>
+                                        <associationType name="Reference"/>
+                                        <associationType name="ReferenceSet"/>
+                                    </associationTypes>
+                                </property>
+                                <property key="attribute" type="attribute" required="false">
+                                    <caption>Attribute</caption>
+                                    <description></description>
+                                    <attributeTypes>
+                                        <attributeType name="AutoNumber"/>
+                                        <attributeType name="Binary"/>
+                                        <attributeType name="Boolean"/>
+                                        <attributeType name="DateTime"/>
+                                        <attributeType name="Enum"/>
+                                        <attributeType name="HashString"/>
+                                        <attributeType name="Integer"/>
+                                        <attributeType name="Long"/>
+                                        <attributeType name="String"/>
+                                        <attributeType name="Decimal"/>
+                                    </attributeTypes>
+                                </property>
+                            </propertyGroup>
+                            <propertyGroup caption="Message click">
+                                <property key="clickAction" type="enumeration" defaultValue="none">
+                                    <caption>Action</caption>
+                                    <description></description>
+                                    <enumerationValues>
+                                        <enumerationValue key="none">Nothing</enumerationValue>
+                                        <enumerationValue key="scrollIntoView">Scroll into view</enumerationValue>
+                                        <enumerationValue key="focus">Focus on</enumerationValue>
+                                    </enumerationValues>
+                                </property>
+                                <property key="actionSelector" type="string" defaultValue="" required="false">
+                                    <caption>Action CSS selector</caption>
+                                    <description></description>
+                                </property>
+                            </propertyGroup>
+                        </propertyGroup>
+                    </properties>
+                </property>
+                <property key="messageTemplate" type="string" defaultValue="%c validation error%s: %l">
+                    <caption>Caption template</caption>
+                    <description>Tokens:
+    %c - validation message count
+    %s - append 's' (if count NOT EQUAL 1)
+    %l - unordered list of validation messages</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Common">
+            <systemProperty key="Name"/>
+            <systemProperty key="Visibility"/>
+        </propertyGroup>
+    </properties>
+</widget>

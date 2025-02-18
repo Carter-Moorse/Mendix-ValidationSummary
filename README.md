@@ -1,17 +1,32 @@
-## DisplayAllValidations
-[Subscribe to the validation messages on the current page]
+## Mendix - Validation Dump
+Dump a summary of validation messages - based on selected fields.
+
+## Use case
+Do you have a long form page? Are your users struggling to complete forms because of lost validation errors?
+
+With this widget, you can display a summary validation message. Simply provide the list of fields you want to watch, and a custom summary message template, and the widget will handle the rest for you!
 
 ## Features
-[feature highlights]
+ - Select fields you want to include in you validation summary
+ - Customise the summary message with a string template
+ - When rendering a list of validation messages - add a message action (scroll into view, focus) and a CSS selector to make navigating to the error simple
 
 ## Usage
-[step by step instructions]
+ 1. Add the widget to your project
+ 2. Drop the widget into context
+ 3. Configure the 'List of fields' to listen to:
+     - Can either be 'Attribute' or 'Reference'
+     - Can optionally add an action to the particular message (scroll into view, focus)
+ 4. Configure the 'Caption template', which can include tokens:
+     - %c - validation message count
+     - %s - append 's' (if count NOT EQUAL 1)
+     - %l - unordered list of validation messages
 
 ## Demo project
 [link to sandbox]
 
 ## Issues, suggestions and feature requests
-[link to GitHub issues]
+Please report any issues to [Mendix-ValidationDump/issues](https://github.com/Carter-Moorse/Mendix-DisplayAllValidations/issues)
 
 ## Development and contribution
 
@@ -20,5 +35,3 @@
     - the widget will be bundled;
     - the bundle will be included in a `dist` folder in the root directory of the project;
     - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
-
-[specify contribution]
