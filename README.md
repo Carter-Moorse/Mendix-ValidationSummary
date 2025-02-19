@@ -23,7 +23,7 @@ With this widget, you can display a summary of validation messages anywhere on t
      - %l - unordered list of validation messages
 
 ## Demo project
-[link to sandbox]
+[Validation Summary widget demo](https://validationsummarywidgetdemo-sandbox.mxapps.io/)
 
 ## Issues, suggestions and feature requests
 Please report any issues to [Mendix-ValidationSummary/issues](https://github.com/Carter-Moorse/Mendix-ValidationSummary/issues)
