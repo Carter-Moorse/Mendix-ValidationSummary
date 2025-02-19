@@ -1,12 +1,11 @@
 <img src="/assets/icon.svg" height="64px" />
 
-# Validation Summary
-Display a summary of validation messages - based on selected fields.
-
-## Use case
+# Validation Summary - Mendix Pluggable Widget
 Do you have a long form page? Are your users struggling to complete forms because of validation errors lost in the page?
 
 With this widget, you can display a summary of validation messages anywhere on the page. Simply provide the list of fields you want to watch, and a custom summary message template, and the widget will handle the rest for you!
+
+See [Demo](https://validationsummarywidgetdemo-sandbox.mxapps.io/).
 
 ## Features
  - Select fields you want to include in you validation summary
@@ -23,9 +22,6 @@ With this widget, you can display a summary of validation messages anywhere on t
      - %c - validation message count
      - %s - append 's' (if count NOT EQUAL 1)
      - %l - unordered list of validation messages
-
-## Demo project
-[Validation Summary widget demo](https://validationsummarywidgetdemo-sandbox.mxapps.io/)
 
 ## Issues, suggestions and feature requests
 Please report any issues to [Mendix-ValidationSummary/issues](https://github.com/Carter-Moorse/Mendix-ValidationSummary/issues)
