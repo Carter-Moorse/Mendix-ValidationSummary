@@ -56,9 +56,7 @@ export function ValidationMessage({
             start = end + 2;
         }
 
-        if (start === 0 && end === -1) {
-            elements.push(message);
-        }
+        elements.push(message.substring(start));
 
         return elements;
     };
