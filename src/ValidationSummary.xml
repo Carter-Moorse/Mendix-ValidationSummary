@@ -3,9 +3,9 @@
         supportedPlatform="Web"
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Validation Dump</name>
+    <name>Validation Summary</name>
     <description>Dump a summary of validation messages - based on selected fields</description>
-    <studioProCategory>Feedback</studioProCategory>
+    <studioProCategory>Input elements</studioProCategory>
     <properties>
         <propertyGroup caption="General">
             <propertyGroup caption="General">
