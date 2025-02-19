@@ -40,7 +40,7 @@ export function ValidationSummary(props: ValidationSummaryContainerProps): React
                     break;
             }
 
-            if (validation != undefined) {
+            if (validation !== undefined) {
                 accu.push({
                     validation,
                     callback

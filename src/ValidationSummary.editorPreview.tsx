@@ -7,7 +7,7 @@ export function preview(props: ValidationSummaryPreviewProps): ReactElement {
         const validation = obj.type === "reference" ? obj.reference : obj.attribute;
         const callback = obj.clickAction !== "none" ? () => 0 : undefined;
 
-        if (validation != undefined) {
+        if (validation !== undefined) {
             accu.push({
                 validation,
                 callback

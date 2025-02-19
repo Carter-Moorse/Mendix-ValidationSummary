@@ -36,7 +36,7 @@ export function ValidationMessage({
     const renderList = () => (
         <ul>
             {messages.map(item => (
-                <li>{renderItem(item)}</li>
+                <li key={item.validation}>{renderItem(item)}</li>
             ))}
         </ul>
     );
@@ -50,7 +50,7 @@ export function ValidationMessage({
         let end = -1;
         const elements: Array<string | JSX.Element> = [];
 
-        while ((end = message.indexOf("%l", end + 1)) != -1) {
+        while ((end = message.indexOf("%l", end + 1)) !== -1) {
             elements.push(message.substring(start, end));
             elements.push(renderList());
             start = end + 2;
