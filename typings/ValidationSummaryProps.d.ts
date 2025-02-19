@@ -1,5 +1,5 @@
 /**
- * This file was generated from ValidationDump.xml
+ * This file was generated from ValidationSummary.xml
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix Widgets Framework Team
  */
@@ -29,7 +29,7 @@ export interface ListenToFieldsPreviewType {
     actionSelector: string;
 }
 
-export interface ValidationDumpContainerProps {
+export interface ValidationSummaryContainerProps {
     name: string;
     class: string;
     style?: CSSProperties;
@@ -38,7 +38,7 @@ export interface ValidationDumpContainerProps {
     messageTemplate: string;
 }
 
-export interface ValidationDumpPreviewProps {
+export interface ValidationSummaryPreviewProps {
     /**
      * @deprecated Deprecated since version 9.18.0. Please use class property instead.
      */

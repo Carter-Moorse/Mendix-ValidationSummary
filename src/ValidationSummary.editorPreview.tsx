@@ -1,8 +1,8 @@
 import { ReactElement, createElement } from "react";
 import { ValidationMessage, MessageOptions } from "./components/ValidationMessage";
-import { ValidationDumpPreviewProps } from "../typings/ValidationDumpProps";
+import { ValidationSummaryPreviewProps } from "../typings/ValidationSummaryProps";
 
-export function preview(props: ValidationDumpPreviewProps): ReactElement {
+export function preview(props: ValidationSummaryPreviewProps): ReactElement {
     const validationMessages = props.listenToFields.reduce((accu: MessageOptions[], obj) => {
         const validation = obj.type === "reference" ? obj.reference : obj.attribute;
         const callback = obj.clickAction !== "none" ? () => 0 : undefined;

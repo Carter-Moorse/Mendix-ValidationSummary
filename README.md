@@ -1,14 +1,14 @@
-## Mendix - Validation Dump
-Dump a summary of validation messages - based on selected fields.
+## Mendix - Validation Summary
+Display a summary of validation messages - based on selected fields.
 
 ## Use case
-Do you have a long form page? Are your users struggling to complete forms because of lost validation errors?
+Do you have a long form page? Are your users struggling to complete forms because of validation errors lost in the page?
 
-With this widget, you can display a summary validation message. Simply provide the list of fields you want to watch, and a custom summary message template, and the widget will handle the rest for you!
+With this widget, you can display a summary of validation messages anywhere on the page. Simply provide the list of fields you want to watch, and a custom summary message template, and the widget will handle the rest for you!
 
 ## Features
  - Select fields you want to include in you validation summary
- - Customise the summary message with a string template
+ - Customise the summary message with a template
  - When rendering a list of validation messages - add a message action (scroll into view, focus) and a CSS selector to make navigating to the error simple
 
 ## Usage
@@ -26,7 +26,7 @@ With this widget, you can display a summary validation message. Simply provide t
 [link to sandbox]
 
 ## Issues, suggestions and feature requests
-Please report any issues to [Mendix-ValidationDump/issues](https://github.com/Carter-Moorse/Mendix-DisplayAllValidations/issues)
+Please report any issues to [Mendix-ValidationSummary/issues](https://github.com/Carter-Moorse/Mendix-ValidationSummary/issues)
 
 ## Development and contribution
 

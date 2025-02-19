@@ -1,9 +1,9 @@
 import { ReactElement, createElement, useMemo, MouseEvent } from "react";
 import { ValidationMessage, MessageOptions } from "./components/ValidationMessage";
 
-import { ValidationDumpContainerProps } from "../typings/ValidationDumpProps";
+import { ValidationSummaryContainerProps } from "../typings/ValidationSummaryProps";
 
-export function ValidationDump(props: ValidationDumpContainerProps): ReactElement {
+export function ValidationSummary(props: ValidationSummaryContainerProps): ReactElement {
     // Data attribute only used for widget reference. Disable data
     props.listenToFields.forEach(obj => {
         if (obj.type === "reference" && obj.data) {

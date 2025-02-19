@@ -66,7 +66,7 @@ export function ValidationMessage({
     return (
         <Fragment>
             {shouldRender() && (
-                <div className={classNames([className, "validationDump"])} style={style}>
+                <div className={classNames([className, "validationSummary"])} style={style}>
                     {renderMessages()}
                 </div>
             )}

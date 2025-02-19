@@ -1,4 +1,4 @@
-import { ValidationDumpPreviewProps } from "../typings/ValidationDumpProps";
+import { ValidationSummaryPreviewProps } from "../typings/ValidationSummaryProps";
 import { hideNestedPropertiesIn } from "@mendix/pluggable-widgets-tools";
 
 export type Platform = "web" | "desktop";
@@ -101,7 +101,7 @@ export type PreviewProps =
     | DatasourceProps;
 
 export function getProperties(
-    _values: ValidationDumpPreviewProps,
+    _values: ValidationSummaryPreviewProps,
     defaultProperties: Properties /* , target: Platform*/
 ): Properties {
     _values.listenToFields.forEach((value, index) => {
@@ -119,7 +119,7 @@ export function getProperties(
     return defaultProperties;
 }
 
-// export function check(_values: ValidationDumpPreviewProps): Problem[] {
+// export function check(_values: ValidationSummaryPreviewProps): Problem[] {
 //     const errors: Problem[] = [];
 //     // Add errors to the above array to throw errors in Studio and Studio Pro.
 //     /* Example
@@ -134,7 +134,7 @@ export function getProperties(
 //     return errors;
 // }
 
-// export function getPreview(values: ValidationDumpPreviewProps, isDarkMode: boolean, version: number[]): PreviewProps {
+// export function getPreview(values: ValidationSummaryPreviewProps, isDarkMode: boolean, version: number[]): PreviewProps {
 //     // Customize your pluggable widget appearance for Studio Pro.
 //     return {
 //         type: "Container",
@@ -142,6 +142,6 @@ export function getProperties(
 //     }
 // }
 
-// export function getCustomCaption(values: ValidationDumpPreviewProps, platform: Platform): string {
-//     return "ValidationDump";
+// export function getCustomCaption(values: ValidationSummaryPreviewProps, platform: Platform): string {
+//     return "ValidationSummary";
 // }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://www.mendix.com/package/1.0/">
-    <clientModule name="ValidationDump" version="1.0.0" xmlns="http://www.mendix.com/clientModule/1.0/">
+    <clientModule name="ValidationSummary" version="1.0.0" xmlns="http://www.mendix.com/clientModule/1.0/">
         <widgetFiles>
-            <widgetFile path="ValidationDump.xml"/>
+            <widgetFile path="ValidationSummary.xml"/>
         </widgetFiles>
         <files>
-            <file path="auraq/validationdump"/>
+            <file path="auraq/validationsummary"/>
         </files>
     </clientModule>
 </package>

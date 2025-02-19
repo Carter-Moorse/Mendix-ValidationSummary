@@ -1,6 +1,6 @@
 {
-  "name": "validationdump",
-  "widgetName": "ValidationDump",
+  "name": "validationsummary",
+  "widgetName": "ValidationSummary",
   "version": "1.0.0",
   "description": "Dump a summary of validation messages - based on selected fields",
   "copyright": "© Mendix Technology BV 2022. All rights reserved.",
