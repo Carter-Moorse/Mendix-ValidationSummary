@@ -54,6 +54,7 @@ export function ValidationSummary(props: ValidationSummaryContainerProps): React
         <ValidationMessage
             messages={messages}
             messageTemplate={props.messageTemplate}
+            listStyle={props.listStyle}
             className={props.class}
             style={props.style}
         />

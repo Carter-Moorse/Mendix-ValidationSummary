@@ -20,6 +20,7 @@ export function preview(props: ValidationSummaryPreviewProps): ReactElement {
         <ValidationMessage
             messages={validationMessages}
             messageTemplate={props.messageTemplate}
+            listStyle={props.listStyle}
             className={props.class}
         />
     );

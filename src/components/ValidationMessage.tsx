@@ -1,4 +1,5 @@
 import { CSSProperties, Fragment, ReactElement, createElement, MouseEvent } from "react";
+import { ListStyleEnum } from "../../typings/ValidationSummaryProps";
 import classNames from "classnames";
 
 export interface MessageOptions {
@@ -9,6 +10,7 @@ export interface MessageOptions {
 export interface ValidationMessageProps {
     messages: MessageOptions[];
     messageTemplate: string;
+    listStyle: ListStyleEnum;
     className?: string;
     style?: CSSProperties;
 }
@@ -16,6 +18,7 @@ export interface ValidationMessageProps {
 export function ValidationMessage({
     messages,
     messageTemplate,
+    listStyle,
     className,
     style
 }: ValidationMessageProps): ReactElement {
@@ -33,13 +36,35 @@ export function ValidationMessage({
         return item.validation;
     };
 
-    const renderList = () => (
-        <ul>
-            {messages.map(item => (
-                <li key={item.validation}>{renderItem(item)}</li>
-            ))}
-        </ul>
-    );
+    const renderList = () => {
+        switch (listStyle) {
+            case "csv":
+                return (
+                    <Fragment>
+                        {messages
+                            .map(item => renderItem(item))
+                            .reduce<Array<string | JSX.Element>>((acc, val) => acc.concat(", ", val), [])
+                            .slice(1)}
+                    </Fragment>
+                );
+            case "ol":
+                return (
+                    <ol>
+                        {messages.map(item => (
+                            <li key={item.validation}>{renderItem(item)}</li>
+                        ))}
+                    </ol>
+                );
+            default:
+                return (
+                    <ul>
+                        {messages.map(item => (
+                            <li key={item.validation}>{renderItem(item)}</li>
+                        ))}
+                    </ul>
+                );
+        }
+    };
 
     const renderMessages = () => {
         let message = messageTemplate;

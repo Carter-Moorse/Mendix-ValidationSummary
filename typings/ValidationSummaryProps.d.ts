@@ -12,18 +12,20 @@ export type TypeEnum = "attribute" | "reference";
 export type ClickActionEnum = "none" | "scrollIntoView" | "focus";
 
 export interface ListenToFieldsType {
-    data?: ListValue;
     type: TypeEnum;
     reference?: ReferenceValue | ReferenceSetValue;
+    data?: ListValue;
     attribute?: EditableValue<Big | any | boolean | Date | string>;
     clickAction: ClickActionEnum;
     actionSelector: string;
 }
 
+export type ListStyleEnum = "ul" | "ol" | "csv";
+
 export interface ListenToFieldsPreviewType {
-    data: {} | { caption: string } | { type: string } | null;
     type: TypeEnum;
     reference: string;
+    data: {} | { caption: string } | { type: string } | null;
     attribute: string;
     clickAction: ClickActionEnum;
     actionSelector: string;
@@ -36,6 +38,7 @@ export interface ValidationSummaryContainerProps {
     tabIndex?: number;
     listenToFields: ListenToFieldsType[];
     messageTemplate: string;
+    listStyle: ListStyleEnum;
 }
 
 export interface ValidationSummaryPreviewProps {
@@ -51,4 +54,5 @@ export interface ValidationSummaryPreviewProps {
     translate: (text: string) => string;
     listenToFields: ListenToFieldsPreviewType[];
     messageTemplate: string;
+    listStyle: ListStyleEnum;
 }

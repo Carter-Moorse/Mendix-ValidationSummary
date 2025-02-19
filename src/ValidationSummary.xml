@@ -15,10 +15,6 @@
                     <properties>
                         <propertyGroup caption="General">
                             <propertyGroup caption="Data">
-                                <property key="data" type="datasource" isList="true" required="false">
-                                    <caption>Data source</caption>
-                                    <description />
-                                </property>
                                 <property key="type" type="enumeration" defaultValue="attribute">
                                     <caption>Listen type</caption>
                                     <description></description>
@@ -34,6 +30,10 @@
                                         <associationType name="Reference"/>
                                         <associationType name="ReferenceSet"/>
                                     </associationTypes>
+                                </property>
+                                <property key="data" type="datasource" isList="true" required="false">
+                                    <caption>Data source</caption>
+                                    <description>Unused, but required by Mendix. Set to reference entity</description>
                                 </property>
                                 <property key="attribute" type="attribute" required="false">
                                     <caption>Attribute</caption>
@@ -73,9 +73,18 @@
                 <property key="messageTemplate" type="string" defaultValue="%c validation error%s: %l">
                     <caption>Caption template</caption>
                     <description>Tokens:
-    %c - validation message count
-    %s - append 's' (if count NOT EQUAL 1)
-    %l - unordered list of validation messages</description>
+    %c - Count of validation messages
+    %s - Append 's' (count NOT EQUAL 1)
+    %l - List of validation messages</description>
+                </property>
+                <property key="listStyle" type="enumeration" defaultValue="ul">
+                    <caption>List style</caption>
+                    <description></description>
+                    <enumerationValues>
+                        <enumerationValue key="ul">Unordered list</enumerationValue>
+                        <enumerationValue key="ol">Ordered list</enumerationValue>
+                        <enumerationValue key="csv">Comma-separated</enumerationValue>
+                    </enumerationValues>
                 </property>
             </propertyGroup>
         </propertyGroup>
