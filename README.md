@@ -1,4 +1,6 @@
-## Mendix - Validation Summary
+<img src="/assets/icon.svg" height="64px" />
+
+# Validation Summary
 Display a summary of validation messages - based on selected fields.
 
 ## Use case
