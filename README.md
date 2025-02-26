@@ -15,6 +15,9 @@ See [Demo](https://validationsummarywidgetdemo-sandbox.mxapps.io/).
  - Add a message action (scroll into view, focus) with CSS selector - to make navigating to the error simple
 
 ## Usage
+> [!Warning]
+> Requires Mendix Studio Pro 9.17 or later
+
  1. Add the widget to your project
  2. Drop the widget into context
  3. Configure the 'List of fields' to listen to:
